@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>To Do App(DRF)</title>
+</head>
+<body>
+    <main class="container">
+        <div id="task-container">
+
+            <section id="form-wrapper">
+                <form id="form">
+                    {% csrf_token %}
+                    <div class="flex-wrapper">
+                        <div style="flex: 6">
+                            <input name="title" placeholder="Add task..." type="text" id="title" class="form-control">
+                        </div>
+                        <div style="flex: 1">
+                            <input type="submit" class="btn" id="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section id="list-wrapper">
+            </section>
+        </div>
+    </main>    
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
